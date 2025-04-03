@@ -1,0 +1,28 @@
+{
+    "projects": [
+        {
+        "id": 1,
+        "title": "Kasir App",
+        "description": "A simple Point of Sale (POS) application built with NextJS, Tailwind CSS, and MySQL. This project showcases my skills in full stack development and database management.",
+        "image": "/assets/projects/kasir.png",
+        "url": "https://github.com/RevvsX/kasir-app",
+        "demo": ""
+        },
+        {
+        "id": 2,
+        "title": "School profile website for SMKN 1 Bantul",
+        "description": "A school profile website built with Laravel, Tailwind CSS, and MySQL. This project showcases my skills in full stack development and database management.",
+        "image": "/assets/projects/profile-sekolah.png",
+        "url": "https://github.com/eksa-arifa/skansaba",
+        "demo": "https://smkn1bantul.sch.id/"
+        },
+        {
+        "id": 3,
+        "title": "Pinjam gedung kalurahan gilangharjo",
+        "description": "A building rental website for Kalurahan Gilangharjo built with Laravel, Tailwind CSS, and MySQL. This project showcases my skills in full stack development and database management.",
+        "image": "/assets/projects/pinjam-gedung.png",
+        "url": "",
+        "demo": "https://pinjamgedung.gilangharjo.id/"
+        }
+    ]
+}

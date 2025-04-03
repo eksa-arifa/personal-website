@@ -1,0 +1,22 @@
+{
+    "sertificates": [
+        {
+        "id": 1,
+        "title": "LKS DIY Web Technologies",
+        "description": "1ST PLACE in the LKS DIY Web Technologies competition held by the Yogyakarta Provincial Government.",
+        "image": "/assets/sertificates/lks-diy.jpg"
+        },
+        {
+        "id": 2,
+        "title": "LKS NATIONAL Web Technologies",
+        "description": "MEDALLION FOR EXCELLENCE (MOE) in the LKS NATIONAL Web Technologies competition held by the Ministry of Education and Culture.",
+        "image": "/assets/sertificates/lksn.jpeg"
+        },
+        {
+        "id": 3,
+        "title": "Samsung Innovation Campus Batch 6",
+        "description": "STAGE 2 of the Samsung Innovation Campus Batch 6 program, themed on the integration between the internet of things and artificial intelligence.",
+        "image": "/assets/sertificates/samsung.jpg"
+        }
+    ]
+}
