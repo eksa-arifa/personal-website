@@ -26,7 +26,7 @@ const Body = () => {
   }, [setScrollTop])
 
   return (
-    <div id="body" className="md:w-3/5 w-full px-10 md:px-0 md:pr-10 py-10 gap-16 flex flex-col text-white md:max-h-screen md:overflow-y-auto">
+    <div id="body" className="md:w-3/5 w-full px-6 md:px-0 md:pr-10 py-10 gap-16 flex flex-col text-white md:max-h-screen md:overflow-y-auto">
       <div className="flex flex-col gap-4" id="wellcome">
         <h1 className="lg:text-6xl font-bold text-4xl">Hi, my name is Muhammad Eksa Arifa</h1>
         <span className="text-2xl text-gray-400">Wellcome in my portfolio</span>
