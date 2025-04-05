@@ -41,16 +41,16 @@ const Header = () => {
                 <p className="text-gray-400 text-xl lg:text-2xl">Software Engineer</p>
             </div>
             <div className="flex gap-4">
-                <a href="">
+                <a href="https://instagram.com/eksrifaa" target="_blank" rel="noopener noreferrer">
                     <SiInstagram size={25} />
                 </a>
-                <a href="">
+                <a href="https://github.com/eksa-arifa" target="_blank" rel="noopener noreferrer">
                     <SiGithub size={25} />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/m-eksa-arifa-048757340" target="_blank" rel="noopener noreferrer">
                     <Linkedin size={25} />
                 </a>
-                <a href="">
+                <a href="mailto:eksaarifa@gmail.com" target="_blank" rel="noopener noreferrer">
                     <Mail size={25} />
                 </a>
             </div>
