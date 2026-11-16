@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+        "id": 4,
+        "title": "TravelloMatic",
+        "description": "A tour and travel marketplace web platform built with Next.js that connects travelers with verified local tour operators. Features catalog discovery across tours, events, and attractions, multi-language and multi-currency support, and secure booking workflows.",
+        "image": "/assets/projects/travellomatic.png",
+        "url": "",
+        "demo": "https://travellomatic.com"
+        },
+        {
         "id": 1,
         "title": "Kasir App",
         "description": "A simple Point of Sale (POS) application built with NextJS, Tailwind CSS, and MySQL. This project showcases my skills in full stack development and database management.",
