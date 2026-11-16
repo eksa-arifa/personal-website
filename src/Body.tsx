@@ -2,43 +2,65 @@ import { useEffect } from "react"
 import Projects from "./components/Projects"
 import Skills from "./components/Skills"
 import { useScrollContext } from "./hooks/ScrollContext"
+import { useLanguageContext } from "./hooks/LanguageContext"
 import About from "./components/About"
-import Certificates from "./components/Certificates"
 
 
+
+const SECTION_IDS = ["about", "skills", "projects"] as const
+const ACTIVATION_OFFSET = 140
 
 const Body = () => {
-  const { setScrollTop } = useScrollContext()
+  const { setScrollSection } = useScrollContext()
+  const { copy } = useLanguageContext()
 
   useEffect(() => {
-    const body = document.getElementById("body")
+    const updateActiveSection = () => {
+      const nearBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4
 
-    body?.addEventListener("scroll", () => {
-      const scrollTop = body.scrollTop
-      setScrollTop(scrollTop)
-    })
+      if (nearBottom) {
+        setScrollSection(SECTION_IDS[SECTION_IDS.length - 1])
+        return
+      }
 
-    window.addEventListener("scroll", () => {
-      const scrollTop = window.scrollY
-      setScrollTop(scrollTop)
-    })
+      let current: string = SECTION_IDS[0]
+      for (const id of SECTION_IDS) {
+        const el = document.getElementById(id)
+        if (el && el.getBoundingClientRect().top <= ACTIVATION_OFFSET) {
+          current = id
+        }
+      }
+      setScrollSection(current)
+    }
 
-  }, [setScrollTop])
+    updateActiveSection()
+    window.addEventListener("scroll", updateActiveSection, { passive: true })
+    window.addEventListener("resize", updateActiveSection, { passive: true })
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection)
+      window.removeEventListener("resize", updateActiveSection)
+    }
+  }, [setScrollSection])
 
   return (
-    <div id="body" className="md:w-3/5 w-full px-6 md:px-0 md:pr-10 py-10 gap-16 flex flex-col text-white md:max-h-screen md:overflow-y-auto">
-      <div className="flex flex-col gap-4" id="wellcome">
-        <h1 className="lg:text-6xl font-bold text-4xl">Hi, my name is Muhammad Eksa Arifa</h1>
-        <span className="text-2xl text-gray-400">Wellcome in my portfolio</span>
+    <main id="body" className="flex-1 min-w-0 flex flex-col gap-14 sm:gap-16 lg:gap-20 pt-4 pb-10 md:py-14 lg:py-16 text-white">
+      <div className="flex flex-col gap-3" id="wellcome">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight tracking-tight">
+          {copy.hero.greeting}
+        </h1>
+        <p className="text-lg sm:text-xl text-gray-400 leading-relaxed text-justify">
+          {copy.hero.subtitle}
+        </p>
       </div>
       <About />
       <Skills />
       <Projects />
-      <Certificates/>
-      <footer className='mt-auto md:hidden'>
-        <p className="text-gray-600 text-nowrap">© 2025 Muhammad Eksa Arifa</p>
+      <footer className="pt-6 border-t border-slate-700/60 md:hidden">
+        <p className="text-slate-400 text-sm">© 2025 Muhammad Eksa Arifa</p>
       </footer>
-    </div>
+    </main>
   )
 }
 
