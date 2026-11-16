@@ -1,6 +1,14 @@
 {
     "projects": [
         {
+        "id": 5,
+        "title": "SIGENTING — Kemendukbangga/BKKBN",
+        "description": "A national data information and monitoring platform (Sistem Informasi Gerakan Orang Tua Asuh Cegah Stunting) for the Ministry of Population and Family Development (Kemendukbangga/BKKBN). Supports 5-tier regional hierarchy monitoring across central, provincial, regency, district, and village levels alongside aid achievement statistics.",
+        "image": "/assets/projects/sigenting.png",
+        "url": "",
+        "demo": "https://sigenting.kemendukbangga.go.id/"
+        },
+        {
         "id": 4,
         "title": "TravelloMatic",
         "description": "A tour and travel marketplace web platform built with Next.js that connects travelers with verified local tour operators. Features catalog discovery across tours, events, and attractions, multi-language and multi-currency support, and secure booking workflows.",
